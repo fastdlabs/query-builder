@@ -8,8 +8,6 @@
  * @link      http://www.fast-d.cn/
  */
 
-namespace FastD\QueryBuilder\Tests;
-
 use FastD\QueryBuilder\MySQL;
 
 class DBTest extends \PHPUnit_Framework_TestCase

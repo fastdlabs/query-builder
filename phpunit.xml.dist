@@ -11,8 +11,8 @@
         <ini name="error_reporting" value="-16385"/>
     </php>
     <testsuites>
-        <testsuite name="Fdb Tests">
-            <directory>./src/QueryBuilder/Tests</directory>
+        <testsuite name="Query Builder Tests">
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
