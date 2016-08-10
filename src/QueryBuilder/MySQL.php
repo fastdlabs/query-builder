@@ -15,7 +15,7 @@ namespace FastD\QueryBuilder;
  *
  * @package FastD\Database\Query
  */
-class MySQL extends QueryBuilderAbstract
+class MySQL extends QueryBuilder
 {
     /**
      * @param array $where

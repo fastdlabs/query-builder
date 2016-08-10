@@ -1,2 +1,2 @@
-# queryBuilder
+# Query Builder
 FastD Fdb QueryBuilder
