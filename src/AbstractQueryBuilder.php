@@ -15,7 +15,7 @@ namespace FastD\QueryBuilder;
  *
  * @package FastD\QueryBuilder
  */
-abstract class QueryBuilder
+abstract class AbstractQueryBuilder
 {
     /**
      * @var string

@@ -15,7 +15,7 @@ namespace FastD\QueryBuilder;
  *
  * @package FastD\Database\Query
  */
-class MySQL extends QueryBuilder
+class MySqlBuilder extends AbstractQueryBuilder
 {
     /**
      * @param array $where
@@ -58,7 +58,7 @@ class MySQL extends QueryBuilder
 
     /**
      * @param array $data
-     * @param int   $operation
+     * @param int $operation
      * @return $this
      */
     protected function data(array $data, $operation = self::BUILDER_UPDATE)
@@ -120,7 +120,7 @@ class MySQL extends QueryBuilder
 
         return $this;
     }
-    
+
     /**
      * @param array $having
      * @return $this
@@ -243,7 +243,7 @@ class MySQL extends QueryBuilder
                 $str = $alias;
             } else {
                 if (false === strpos($name, '(')) {
-                    $alias = '`'. $name . '` AS `' . $alias . '`,';
+                    $alias = '`' . $name . '` AS `' . $alias . '`,';
                 } else {
                     $alias = $name . ' AS `' . $alias . '`,';
                 }
@@ -300,18 +300,18 @@ class MySQL extends QueryBuilder
                 break;
             case static::BUILDER_SELECT:
             default:
-                $sql = 'SELECT ' . (empty($this->fields) ? '*': $this->fields) . ' FROM ' . $this->table . $this->where . $this->like . $this->group . $this->having . $this->order . $this->limit . ';';
+                $sql = 'SELECT ' . (empty($this->fields) ? '*' : $this->fields) . ' FROM ' . $this->table . $this->where . $this->like . $this->group . $this->having . $this->order . $this->limit . ';';
         }
 
-        $this->fields   = '*';
-        $this->where    = null;
-        $this->group    = null;
-        $this->limit    = null;
-        $this->having   = null;
-        $this->order    = null;
-        $this->keys     = null;
-        $this->value    = null;
-        $this->join     = null;
+        $this->fields = '*';
+        $this->where = null;
+        $this->group = null;
+        $this->limit = null;
+        $this->having = null;
+        $this->order = null;
+        $this->keys = null;
+        $this->value = null;
+        $this->join = null;
 
         $this->logs[] = $sql;
 
