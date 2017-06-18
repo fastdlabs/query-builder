@@ -16,5 +16,7 @@ class MySqlBuilderTest extends PHPUnit_Framework_TestCase
         $mysql = new MySqlBuilder();
 
         echo $mysql->select()->from('test');
+
+        $this->expectOutputString('SELECT * FROM `test`;');
     }
 }
