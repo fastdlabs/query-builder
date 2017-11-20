@@ -1,6 +1,6 @@
 {
     "name": "fastd/query-builder",
-    "description": "SQL builder",
+    "description": "Query builder",
     "license": "MIT",
     "type": "library",
     "keywords": ["query", "FastD"],

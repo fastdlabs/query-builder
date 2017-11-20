@@ -16,12 +16,7 @@ composer require "fastd/query-builder" -vvv
 $mysql = new MySqlBuilder();
 
 $mysql->select()->from('test');
-```
-
-##### 输出
-
-```mysql
-SELECT * FROM `test`
+// SELECT * FROM `test`;
 ```
 
 # License MIT
